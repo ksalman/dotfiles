@@ -2,6 +2,9 @@
 let $MYVIMRC = '$HOME/dotfiles/vimrc'
 
 
+"====================line numbers====================
+set number
+
 "====================map leader====================
 let mapleader = ","
 
@@ -28,16 +31,14 @@ Bundle 'gmarik/vundle'
  "
  " original repos on github
 Bundle 'tpope/vim-fugitive'
+Bundle 'kien/ctrlp.vim'
  " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'Solarized'
- " non github repos
-Bundle 'git://git.wincent.com/command-t.git'
 
 filetype plugin indent on     " required!
  " NOTE: comments after Bundle command are not allowed..
-
 
 "====================solarized====================
 
@@ -70,4 +71,3 @@ map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>
 map ,( :s/^\(.*\)$/\(\* \1 \*\)/<CR>
 map ,< :s/^\(.*\)$/<!-- \1 -->/<CR>
 map ,d :s/^\([/(]\*\\|<!--\) \(.*\) \(\*[/)]\\|-->\)$/\2/<CR>
-
