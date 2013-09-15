@@ -64,7 +64,7 @@ set ignorecase smartcase
 
 "====================Windows stuff====================
 if has('win32') || has('win64')
-  " set fond
+  " set font
   set guifont=Consolas:h11
 
   " Remove Left hand scroll bar to prevent window from unsnapping
