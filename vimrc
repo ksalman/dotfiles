@@ -5,10 +5,11 @@ let $MYVIMRC = '$HOME/dotfiles/vimrc'
 "====================line numbers====================
 set number
 
+
 "====================map leader====================
 let mapleader = ","
 
-let s:ruby_path = 'C:\Ruby192\bin'
+
 "====================vundle config====================
 " https://github.com/gmarik/vundle/blob/master/README.md#quick-start
 
@@ -53,6 +54,32 @@ colorscheme solarized
 imap <c-u> <esc>viwUea
 nmap <c-u> viwU
 
+
+"====================search options====================
+
+set incsearch
+set hlsearch
+set ignorecase smartcase
+
+
+"====================Windows stuff====================
+if has('win32') || has('win64')
+  " set fond
+  set guifont=Consolas:h11
+
+  " Remove Left hand scroll bar to prevent window from unsnapping
+  set guioptions-=L
+
+  " Always show tabline, prevents window from unsnapping
+  set showtabline=2
+endif
+
+
+"====================tab stuff====================
+set tabstop=2
+set expandtab
+set softtabstop=2
+set shiftwidth=2
 
 
 " lhs comments
