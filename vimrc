@@ -10,6 +10,24 @@ set number
 let mapleader = ","
 
 
+"====================map leader====================
+set visualbell
+
+
+"====================status line====================
+set stl=%f\ %m\ %r\ Line:\ %l/%L[%p%%]\ Col:\ %c\ Buf:\ #%n\ [%b][0x%B]
+
+
+"====================Always show status line====================
+set laststatus=2
+
+
+"====================Scroll option====================
+" When the page starts to scroll, keep the cursor 8 lines from
+" the top and 8 lines from the bottom
+set scrolloff=8
+
+
 "====================vundle config====================
 " https://github.com/gmarik/vundle/blob/master/README.md#quick-start
 
