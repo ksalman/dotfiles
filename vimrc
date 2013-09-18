@@ -28,6 +28,16 @@ set laststatus=2
 set scrolloff=8
 
 
+
+"====================Allow saving of files as sudo====================
+cmap W w !sudo tee % > /dev/null
+
+if version >= 703
+  set colorcolumn=80 " highlight the 80th column
+  set relativenumber " absolute line number are in statusbar anyway
+endif
+
+
 "====================vundle config====================
 " https://github.com/gmarik/vundle/blob/master/README.md#quick-start
 
@@ -61,11 +71,12 @@ filetype plugin indent on     " required!
 
 "====================solarized====================
 
-if has("gui_running")
   syntax enable
+  set t_Co=16
   set background=dark
   colorscheme solarized
   
+if has("gui_running")
   function! ToggleBackground()
       if (w:solarized_style=="dark")
       let w:solarized_style="light"
