@@ -30,7 +30,7 @@ set scrolloff=8
 
 
 "====================Allow saving of files as sudo====================
-cmap W w !sudo tee % > /dev/null
+cmap w!! w !sudo tee % > /dev/null
 
 if version >= 703
   set colorcolumn=80 " highlight the 80th column
