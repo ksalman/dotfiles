@@ -65,6 +65,9 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'Solarized'
+Bundle 'Indent-Guides'
+Bundle 'ervandew/supertab'
+Bundle 'git://github.com/davidhalter/jedi-vim'
 
 filetype plugin indent on     " required!
  " NOTE: comments after Bundle command are not allowed..
@@ -78,18 +81,20 @@ filetype plugin indent on     " required!
   
 if has("gui_running")
   function! ToggleBackground()
-      if (w:solarized_style=="dark")
+    if (w:solarized_style=="dark")
       let w:solarized_style="light"
       colorscheme solarized
-  else
+    else
       let w:solarized_style="dark"
       colorscheme solarized
-  endif
+    endif
   endfunction
   command! Togbg call ToggleBackground()
   nnoremap <F5> :call ToggleBackground()<CR>
   inoremap <F5> <ESC>:call ToggleBackground()<CR>a
   vnoremap <F5> <ESC>:call ToggleBackground()<CR>
+else
+  highlight Pmenu ctermbg=238
 endif
 
 
