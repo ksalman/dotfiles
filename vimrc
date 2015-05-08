@@ -74,6 +74,7 @@ Bundle 'Solarized'
 Bundle 'Indent-Guides'
 Bundle 'ervandew/supertab'
 Bundle 'git://github.com/davidhalter/jedi-vim'
+Bundle 'Auto-Pairs'
 
 filetype plugin indent on     " required!
  " NOTE: comments after Bundle command are not allowed..
