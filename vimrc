@@ -9,6 +9,9 @@ set number
 "====================map leader====================
 let mapleader = ","
 
+"================increment with alt-a================
+set <A-a>=a
+nmap <A-a> <C-a>
 
 "====================map leader====================
 set visualbell
