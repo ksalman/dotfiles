@@ -1,4 +1,5 @@
 "====================VIMRC====================
+
 let $MYVIMRC = '$HOME/dotfiles/vimrc'
 
 
@@ -7,7 +8,13 @@ set number
 
 
 "====================map leader====================
-let mapleader = ","
+let mapleader = "\<Space>"
+
+
+"====================buffers====================
+map <leader>n :bn<cr>
+map <leader>p :bp<cr>
+map <leader>d :bd<cr>
 
 "================increment with alt-a================
 set <A-a>=a
