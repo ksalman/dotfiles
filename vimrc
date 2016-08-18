@@ -57,29 +57,33 @@ if has('win32') || has('win64')
   set runtimepath+=$HOME/vimfiles/bundle/vundle
   call vundle#rc('$HOME/vimfiles/bundle/')
 else
-  set runtimepath+=~/.vim/bundle/vundle/
-  call vundle#rc()
+  set runtimepath+=~/.vim/bundle/Vundle.vim
+  call vundle#begin()
 endif
 
  " let Vundle manage Vundle
- " required! 
-Bundle 'gmarik/vundle'
+ " required
+Plugin 'VundleVim/Vundle.vim'
 
  " My Bundles here:
  "
  " original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'kien/ctrlp.vim'
  " vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'Solarized'
-Bundle 'Indent-Guides'
-Bundle 'ervandew/supertab'
-Bundle 'git://github.com/davidhalter/jedi-vim'
-Bundle 'Auto-Pairs'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+Plugin 'Solarized'
+Plugin 'Indent-Guides'
+Plugin 'ervandew/supertab'
+Plugin 'git://github.com/davidhalter/jedi-vim'
+Plugin 'Auto-Pairs'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
-filetype plugin indent on     " required!
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
  " NOTE: comments after Bundle command are not allowed..
 
 "====================solarized====================
@@ -88,7 +92,7 @@ filetype plugin indent on     " required!
   set t_Co=16
   set background=dark
   colorscheme solarized
-  
+
 if has("gui_running")
   function! ToggleBackground()
     if (w:solarized_style=="dark")
