@@ -80,11 +80,9 @@ Plugin 'kien/ctrlp.vim'
  " vim-scripts repos
 Plugin 'L9'
 Plugin 'FuzzyFinder'
-Plugin 'Solarized'
 Plugin 'Indent-Guides'
 Plugin 'ervandew/supertab'
 Plugin 'git://github.com/davidhalter/jedi-vim'
-Plugin 'Auto-Pairs'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
