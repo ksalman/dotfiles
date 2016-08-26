@@ -116,14 +116,6 @@ else
   highlight Pmenu ctermbg=238
 endif
 
-
-"====================make text uppercase====================
-" make previous word upper case and get back to entering text
-
-imap <c-u> <esc>viwUea
-nmap <c-u> viwU
-
-
 "====================search options====================
 
 set incsearch
