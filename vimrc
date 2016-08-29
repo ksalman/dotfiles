@@ -34,15 +34,18 @@ map <right> <C-w><right>
 set stl=%f\ %m\ %r\ Line:\ %l/%L[%p%%]\ Col:\ %c\ Buf:\ #%n\ [%b][0x%B]
 
 
-"====================Always show status line====================
+"====================sensible defaults====================
 set laststatus=2
+set wildmenu
+set hidden
+set listchars=tab:▸\ ,trail:.,extends:>,precedes:<,nbsp:+,eol:¬
+set list
 
 
 "====================Scroll option====================
 " When the page starts to scroll, keep the cursor 8 lines from
 " the top and 8 lines from the bottom
 set scrolloff=8
-
 
 
 "====================Allow saving of files as sudo====================
