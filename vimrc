@@ -25,10 +25,10 @@ set visualbell
 
 
 "====================move between panes====================
-map <up> <C-w><up>
-map <down> <C-w><down>
-map <left> <C-w><left>
-map <right> <C-w><right>
+map <C-k> <C-w><up>
+map <C-j> <C-w><down>
+map <C-h> <C-w><left>
+map <C-l> <C-w><right>
 
 "====================status line====================
 set stl=%f\ %m\ %r\ Line:\ %l/%L[%p%%]\ Col:\ %c\ Buf:\ #%n\ [%b][0x%B]
@@ -88,6 +88,7 @@ Plugin 'ervandew/supertab'
 Plugin 'git://github.com/davidhalter/jedi-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'git://github.com/scrooloose/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -96,8 +97,11 @@ filetype plugin indent on    " required
 
 "====================solarized====================
 
-  syntax enable
   set t_Co=16
+  syntax enable
+  "let g:solarized_termtrans = 1
+  "let g:solarized_termcolors=16
+  let g:solarized_visibility = "low"
   set background=dark
   colorscheme solarized
 

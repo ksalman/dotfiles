@@ -13,4 +13,6 @@ Linux setup (vundle and vimrc):
   * git clone https://github.com/ksalman/dotfiles.git ~/dotfiles
   * git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
   * ln -s ~/dotfiles/vimrc ~/.vimrc
+  * ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
+  * ln -s ~/dotfiles/inputrc ~/.inputrc
   * fire up gvim, :BundleList, and install the rest of the bundles

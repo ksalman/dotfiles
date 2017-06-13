@@ -14,7 +14,7 @@ fi
 #fi
 
 #PS1='${PWD}@`hostname`: '
-export PATH=$PATH:/u/qa/tools:/usr/X11R6/bin
+export PATH=$PATH:/u/qa/tools:/usr/X11R6/bin:/u/qa/lab/scripts
 export SVN_EDITOR=/u/qa/tools/svn-editor
 
 parse_git_branch() {
@@ -23,11 +23,6 @@ parse_git_branch() {
 export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 #export TERM=screen-256color
-
-# include .bashrc if it exists
-if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
-fi
 
 # make sure terminals wrap lines correctly after resizing them
 shopt -s checkwinsize
@@ -65,12 +60,36 @@ function ipgrab()
 }
 function json-vlab-host()
 {
-  wget -qO - http://json/v1/resources/names/$1
+  wget -qO - http://json/v2/resources/$1
 }
-
+function cached-json-vlab-host()
+{
+  cat ~/work/jsondump/all-vlabs | jq -r ".[].\"$1\" // empty"
+}
+deblive() {
+  /u/qa/lab/scripts/pxeit.pl $1 deblive
+}
 define() {
   curl dict://dict.org/d:$1
 }
+passcmp () {
+  P1=`grep ^$1: /u/distrib/Templates/passwd.tmpl | cut -d: -f2`
+  if [ -z "$P1" ]; then
+    echo Password does not exist on shattuck
+    return
+  fi
+  P2=`ssh root@$2 grep ^$1: /etc/shadow 2>/dev/null| cut -d: -f2`
+  if [ -z "$P2" ]; then
+    echo Password does not exist on $2
+    return
+  fi
+  if [ "$P1" == "$P2" ]; then
+    echo Password for $1 matches between shattuck and $2
+  else
+    echo Password for $1 does not match between shattuck and $2
+  fi
+}
+
 alias fact="elinks -dump randomfunfacts.com | sed -n '/^| /p' | tr -d \|"
 alias irssi="TERM=xterm-color irssi"
 alias parallel="parallel --no-notice"
@@ -99,3 +118,8 @@ if [ "$HOSTNAME" == "overseer" ] || [ "$HOSTNAME" == "foreman" ]; then
 fi
 
 source ~/.git_merge
+
+# include .bashrc if it exists
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
