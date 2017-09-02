@@ -21,6 +21,7 @@
 
 (require 'init-evil)
 (require 'init-powerline)
+(require 'init-fonts)
 
 (use-package helm
 	:ensure t
@@ -30,4 +31,6 @@
 (use-package solarized-theme
 	:ensure t)
 
-(load-theme 'solarized-dark)
+(setq solarized-distinct-fringe-background t)
+(setq solarized-high-contrast-mode-line t)
+(load-theme 'solarized-dark t)
