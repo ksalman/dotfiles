@@ -6,12 +6,15 @@
 
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 
-(setq custom-safe-themes t)
+(setq custom-safe-themes t
+      visible-bell t
+      inhibit-startup-echo-area-message t)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (set-default 'cursor-type 'hbar)
-
+(global-linum-mode 1)
+(global-set-key (kbd "C-x C-b") 'ibuffer)
 
 (require 'init-elpa)
 
