@@ -43,11 +43,6 @@
     (global-evil-leader-mode)
 		(air--config-evil-leader))
 
-  (use-package evil-jumper
-    :ensure t
-    :config
-    (global-evil-jumper-mode))
-
   (use-package evil-surround
     :ensure t
     :config
