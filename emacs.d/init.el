@@ -5,6 +5,7 @@
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(setenv "PATH" (concat "c:/Users/ksalman/Documents/putty/;" (getenv "PATH")))
 
 (setq custom-safe-themes t
       visible-bell t
