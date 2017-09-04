@@ -15,6 +15,10 @@
 (set-default 'cursor-type 'hbar)
 (global-linum-mode 1)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
+(when (window-system)
+    (setq mouse-drag-copy-region t)                   ;; Put highlighted region into clipboard
+    (global-set-key [mouse-3] 'mouse-yank-at-click)   ;; Right click to paste
+    )
 
 (require 'init-elpa)
 
@@ -31,9 +35,11 @@
 	:config
 	(helm-mode 1))
 
-(use-package solarized-theme
-	:ensure t)
+(when (window-system)
+    (use-package solarized-theme
+	    :ensure t)
 
-(setq solarized-distinct-fringe-background t)
-(setq solarized-high-contrast-mode-line t)
-(load-theme 'solarized-dark t)
+    (setq solarized-distinct-fringe-background t)
+    (setq solarized-high-contrast-mode-line t)
+    (load-theme 'solarized-dark t)
+    )
