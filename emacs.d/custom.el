@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (evil-jumper use-package solarized-theme powerline-evil helm evil-surround evil-leader evil-indent-textobject))))
+    (solarized-theme helm evil-indent-textobject evil-surround evil-leader powerline-evil powerline evil use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
