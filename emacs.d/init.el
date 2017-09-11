@@ -27,6 +27,7 @@
   (package-refresh-contents)
 	(package-install 'use-package))
 
+(require 'init-autocomplete)
 (require 'init-org)
 (require 'init-evil)
 (require 'init-powerline)
