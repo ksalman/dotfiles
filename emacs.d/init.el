@@ -27,6 +27,7 @@
   (package-refresh-contents)
 	(package-install 'use-package))
 
+(require 'init-org)
 (require 'init-evil)
 (require 'init-powerline)
 (require 'init-fonts)
@@ -36,10 +37,19 @@
 	:config
 	(helm-mode 1))
 
+;; Add this package to play around with text
+(use-package lorem-ipsum
+  :ensure t)
+
 (when (window-system)
     (use-package solarized-theme
 	    :ensure t)
-
+    (setq solarized-use-variable-pitch nil)
+    (setq solarized-height-plus-1 1.0)
+    (setq solarized-height-plus-2 1.0)
+    (setq solarized-height-plus-3 1.0)
+    (setq solarized-height-plus-4 1.0)
+    (setq solarized-high-contrast-mode-line t)
     (setq solarized-distinct-fringe-background t)
     (setq solarized-high-contrast-mode-line t)
     (load-theme 'solarized-dark t)
