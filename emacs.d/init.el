@@ -55,3 +55,9 @@
     (setq solarized-high-contrast-mode-line t)
     (load-theme 'solarized-dark t)
     )
+
+;; store all backup and autosave files in the tmp dir
+(setq backup-directory-alist `((".*" . ,temporary-file-directory))
+      auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
+      tramp-backup-directory-alist `((".*" . ,temporary-file-directory))
+      tramp-auto-save-directory temporary-file-directory)
