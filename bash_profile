@@ -1,5 +1,3 @@
-# the rest of this file is commented out.
-
 export EDITOR=vi
 
 # set PATH so it includes user's private bin if it exists
@@ -7,13 +5,6 @@ if [ -d ~/bin ] ; then
     PATH=~/bin:"${PATH}"
 fi
 
-# do the same with MANPATH
-#if [ -d ~/man ]; then
-#    MANPATH=~/man${MANPATH:-:}
-#    export MANPATH
-#fi
-
-#PS1='${PWD}@`hostname`: '
 export PATH=$PATH:/u/qa/tools:/usr/X11R6/bin:/u/qa/lab/scripts
 export SVN_EDITOR=/u/qa/tools/svn-editor
 
@@ -91,9 +82,8 @@ passcmp () {
 }
 
 alias fact="elinks -dump randomfunfacts.com | sed -n '/^| /p' | tr -d \|"
-alias irssi="TERM=xterm-color irssi"
 alias parallel="parallel --no-notice"
-
+alias emacs="ITERM_24BIT=1 KONSOLE_DBUS_SESSION=1 TERM=xterm-256color /usr/local/bin/emacs -nw"
 
 export HISTIGNORE="&:ls:[bf]g:exit"
 export HISTFILESIZE=5000
@@ -123,3 +113,7 @@ source ~/.git_merge
 if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
+
+export LANG="en_US.UTF-8"
+export LANGUAGE="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
