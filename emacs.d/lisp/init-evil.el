@@ -32,6 +32,8 @@
 
 (use-package evil
   :ensure t
+  :init
+  	(setq evil-want-C-i-jump nil)
 	:commands (evil-mode evil-define-key)
   :config
 	(add-hook 'evil-mode-hook 'air--config-evil)

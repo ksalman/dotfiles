@@ -14,7 +14,9 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (set-default 'cursor-type 'hbar)
-(global-linum-mode 1)
+;;(global-linum-mode 1)
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (when (window-system)
     (setq mouse-drag-copy-region t)                   ;; Put highlighted region into clipboard
@@ -42,7 +44,7 @@
 (use-package lorem-ipsum
   :ensure t)
 
-(when (window-system)
+;(when (window-system)
     (use-package solarized-theme
 	    :ensure t)
     (setq solarized-use-variable-pitch nil)
@@ -54,7 +56,7 @@
     (setq solarized-distinct-fringe-background t)
     (setq solarized-high-contrast-mode-line t)
     (load-theme 'solarized-dark t)
-    )
+;    )
 
 ;; store all backup and autosave files in the tmp dir
 (setq backup-directory-alist `((".*" . ,temporary-file-directory))
