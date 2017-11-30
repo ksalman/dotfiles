@@ -5,7 +5,7 @@ if [ -d ~/bin ] ; then
     PATH=~/bin:"${PATH}"
 fi
 
-export PATH=$PATH:/u/qa/tools:/usr/X11R6/bin:/u/qa/lab/scripts
+export PATH=$PATH:/u/qa/tools:/usr/X11R6/bin:/u/qa/lab/scripts:~/scripts
 export SVN_EDITOR=/u/qa/tools/svn-editor
 
 parse_git_branch() {
@@ -56,6 +56,10 @@ function json-vlab-host()
 function cached-json-vlab-host()
 {
   cat ~/work/jsondump/all-vlabs | jq -r ".[].\"$1\" // empty"
+}
+function vlocation()
+{
+  wget -qO - http://json/v2/resources/$1 | jq -r '.location,.location_altitude'
 }
 deblive() {
   /u/qa/lab/scripts/pxeit.pl $1 deblive
