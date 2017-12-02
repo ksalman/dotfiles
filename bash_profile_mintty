@@ -1,1 +1,1 @@
-eval `ssh-pageant`
+eval $(/usr/bin/ssh-pageant -ra $TEMP/.ssh-pageant)
