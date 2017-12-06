@@ -7,6 +7,10 @@
 (defun air--config-evil ()
 	"Configure evil mode"
 
+	;; Use Emacs state in these modes
+	(dolist (mode '(dired-mode))
+	  (add-to-list 'evil-emacs-state-modes mode))
+
 	(evil-add-hjkl-bindings occur-mode-map 'emacs
 	(kbd "/")       'evil-search-forward
 	(kbd "n")       'evil-search-next
@@ -33,7 +37,7 @@
 (use-package evil
   :ensure t
   :init
-  	(setq evil-want-C-i-jump nil)
+  (setq evil-want-C-i-jump nil)
 	:commands (evil-mode evil-define-key)
   :config
 	(add-hook 'evil-mode-hook 'air--config-evil)
