@@ -44,7 +44,13 @@
 (use-package lorem-ipsum
   :ensure t)
 
-;(when (window-system)
+(use-package which-key
+  :ensure t
+  :diminish ""
+  :config
+  (which-key-mode t))
+
+(when (window-system)
     (use-package solarized-theme
 	    :ensure t)
     (setq solarized-use-variable-pitch nil)
@@ -56,7 +62,7 @@
     (setq solarized-distinct-fringe-background t)
     (setq solarized-high-contrast-mode-line t)
     (load-theme 'solarized-dark t)
-;    )
+    )
 
 ;; store all backup and autosave files in the tmp dir
 (setq backup-directory-alist `((".*" . ,temporary-file-directory))
