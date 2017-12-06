@@ -7,12 +7,12 @@ chproj () {
 }
 
 prompt () {
-  if [ -n "$OS_PROJECT_NAME" ]; then
-    LP_PS1_POSTFIX="($OS_PROJECT_NAME) "
-  else
-    LP_PS1_POSTFIX=""
-  fi
+    if [ -n "$OS_PROJECT_NAME" ]; then
+        PS1="$PS1($OS_PROJECT_NAME) "
+    else
+        PS1=$PS1
+    fi
 }
-PROMPT_COMMAND="prompt; $PROMPT_COMMAND"
+PROMPT_COMMAND="$PROMPT_COMMAND; prompt"
 
 stty -ixon
