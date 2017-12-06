@@ -7,11 +7,11 @@ chproj () {
 }
 
 prompt () {
-    if [ -n "$OS_PROJECT_NAME" ]; then
-        PS1="$PS1($OS_PROJECT_NAME) "
-    else
-        PS1=$PS1
-    fi
+  if [ -n "$OS_PROJECT_NAME" ]; then
+    PS1="$PS1($OS_PROJECT_NAME) "
+  else
+    PS1=$PS1
+  fi
 }
 PROMPT_COMMAND="$PROMPT_COMMAND; prompt"
 
