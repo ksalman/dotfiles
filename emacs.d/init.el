@@ -22,6 +22,7 @@
     (setq mouse-drag-copy-region t)                   ;; Put highlighted region into clipboard
     (global-set-key [mouse-3] 'mouse-yank-at-click)   ;; Right click to paste
     )
+(setq mouse-yank-at-point t)
 
 (require 'init-elpa)
 
