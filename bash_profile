@@ -59,7 +59,12 @@ function cached-json-vlab-host()
 }
 function vlocation()
 {
-  wget -qO - http://json/v2/resources/$1 | jq -r '.location,.location_altitude'
+  wget -qO - http://json/v2/resources/$1 | jq -jr '.location,", Altitude ", .location_altitude,"\n"'
+}
+function ejectinterfaces()
+{
+  owner=$(wget -qO - http://json/v2/resources/$1 | jq -r .owner)
+  give.pl --resource $1 --user $owner --force
 }
 deblive() {
   /u/qa/lab/scripts/pxeit.pl $1 deblive

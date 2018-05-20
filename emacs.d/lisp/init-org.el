@@ -1,3 +1,8 @@
+(use-package org
+  :ensure t
+  :bind ("C-c t A" . org-agenda)
+  :config (setq org-agenda-files '("~/work/org/")))
+
 (use-package org-bullets
   :ensure t
   :config
