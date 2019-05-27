@@ -8,5 +8,14 @@
     "code-runner.enableAppInsights": false,
     "workbench.settings.editor": "json",
     "workbench.settings.openDefaultSettings": false,
-    "terminal.integrated.shellArgs.windows": ["-ExecutionPolicy", "Bypass"],
+    "terminal.integrated.shellArgs.windows": [
+        "-ExecutionPolicy",
+        "Bypass"
+    ],
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
+    "code-runner.executorMap": {
+        "python": "$pythonPath -u $fullFileName"
+    },
+    "code-runner.clearPreviousOutput": true
 }
