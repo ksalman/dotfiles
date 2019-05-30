@@ -19,3 +19,12 @@ if [ -f "${SSH_ENV}" ]; then
 else
     start_agent
 fi
+
+# include .bashrc if it exists
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
+
+export LANG="en_US.UTF-8"
+export LANGUAGE="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"

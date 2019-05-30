@@ -25,3 +25,7 @@ prompt () {
 PROMPT_COMMAND="$PROMPT_COMMAND; prompt"
 
 stty -ixon
+
+if [[ "$OSTYPE" == "msys" ]]; then
+  alias python='winpty python.exe'
+fi
