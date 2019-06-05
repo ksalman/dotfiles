@@ -17,5 +17,6 @@
     "code-runner.executorMap": {
         "python": "$pythonPath -u $fullFileName"
     },
-    "code-runner.clearPreviousOutput": true
+    "code-runner.clearPreviousOutput": true,
+    "remote.SSH.showLoginTerminal": true,
 }
