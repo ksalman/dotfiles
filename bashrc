@@ -25,6 +25,8 @@ prompt () {
 PROMPT_COMMAND="$PROMPT_COMMAND; prompt"
 
 stty -ixon
+# undefine werase so it can be controlled via ~/.inputrc
+stty werase undef
 
 if [[ "$OSTYPE" == "msys" ]]; then
   alias python='winpty python.exe'

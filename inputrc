@@ -1,2 +1,5 @@
+# Reload inputrc:
+# bind -f ~/.inputrc
 set bell-style none
 "\C-j": backward-kill-word
+"\C-W": unix-filename-rubout

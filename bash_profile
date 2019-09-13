@@ -5,7 +5,7 @@ if [ -d ~/bin ] ; then
     PATH=~/bin:"${PATH}"
 fi
 
-export PATH=$PATH:/u/qa/tools:/usr/X11R6/bin:/u/qa/lab/scripts:~/scripts
+export PATH=$PATH:/u/qa/tools:/usr/X11R6/bin:~/scripts:/u/qa/lab/scripts
 export SVN_EDITOR=/u/qa/tools/svn-editor
 
 parse_git_branch() {
@@ -107,11 +107,6 @@ set -o vi
 #last_result() { echo -e $?; }
 #PROMPT_COMMAND=last_result
 
-# pyenv
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
 if [ "$HOSTNAME" == "overseer" ] || [ "$HOSTNAME" == "foreman" ]; then
   umask g+w
 fi
@@ -126,3 +121,10 @@ fi
 export LANG="en_US.UTF-8"
 export LANGUAGE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+eval "$(pyenv virtualenv-init -)"
