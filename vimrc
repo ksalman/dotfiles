@@ -95,33 +95,15 @@ call vundle#end()            " required
 filetype plugin indent on    " required
  " NOTE: comments after Bundle command are not allowed..
 
-"====================solarized====================
-
-  set t_Co=16
-  syntax enable
-  "let g:solarized_termtrans = 1
-  "let g:solarized_termcolors=16
-  let g:solarized_visibility = "low"
-  set background=dark
-  colorscheme solarized
-
-if has("gui_running")
-  function! ToggleBackground()
-    if (w:solarized_style=="dark")
-      let w:solarized_style="light"
-      colorscheme solarized
-    else
-      let w:solarized_style="dark"
-      colorscheme solarized
-    endif
-  endfunction
-  command! Togbg call ToggleBackground()
-  nnoremap <F5> :call ToggleBackground()<CR>
-  inoremap <F5> <ESC>:call ToggleBackground()<CR>a
-  vnoremap <F5> <ESC>:call ToggleBackground()<CR>
-else
-  highlight Pmenu ctermbg=238
-endif
+"====================gruvbox====================
+"
+set t_Co=256
+syntax enable
+" If I set g:gruvbox_contrast_dark after setting the background and
+" colorscheme, the background color in vim is off
+let g:gruvbox_contrast_dark='hard'
+set background=dark
+colorscheme gruvbox
 
 "====================search options====================
 
