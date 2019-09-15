@@ -151,3 +151,5 @@ set shiftwidth=2
 
 "fix error invalid argument completeopt+=noinsert
 let g:jedi#completions_enabled = 0
+
+highlight Comment cterm=italic
