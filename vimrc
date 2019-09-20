@@ -101,7 +101,7 @@ set t_Co=256
 syntax enable
 " If I set g:gruvbox_contrast_dark after setting the background and
 " colorscheme, the background color in vim is off
-let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_dark='medium'
 set background=dark
 colorscheme gruvbox
 
