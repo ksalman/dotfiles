@@ -19,7 +19,7 @@ export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 shopt -s checkwinsize
 
 ssh() {
-    /usr/bin/ssh -oStrictHostKeyChecking=no -oCheckHostIP=no -oUserKnownHostsFile=/dev/null "$@"
+    TERM=screen-256color /usr/bin/ssh -oStrictHostKeyChecking=no -oCheckHostIP=no -oUserKnownHostsFile=/dev/null "$@"
 }
 rsync() {
 /usr/bin/rsync --archive --numeric-ids --progress -e \
