@@ -135,3 +135,5 @@ set shiftwidth=2
 let g:jedi#completions_enabled = 0
 
 highlight Comment cterm=italic
+
+au BufRead,BufNewFile *.sls set ft=yaml
