@@ -43,7 +43,7 @@ case $- in
 esac
 
 # Path to the bash it configuration
-export BASH_IT="/u/ksalman/.bash_it"
+export BASH_IT="$HOME/.bash_it"
 
 # Lock and Load a custom theme file.
 # Leave empty to disable theming.
@@ -100,3 +100,5 @@ source "$BASH_IT"/bash_it.sh
 # My changes to bash-it - ksalman
 # Since I don't need a password to sudo, themes always show sudo specific PS1 all the time - disable it
 export THEME_SHOW_SUDO=false
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
