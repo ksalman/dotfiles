@@ -102,3 +102,6 @@ source "$BASH_IT"/bash_it.sh
 export THEME_SHOW_SUDO=false
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+HISTCONTROL=ignoreboth
+complete -C '/usr/local/bin/aws_completer' aws
