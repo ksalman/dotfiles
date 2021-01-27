@@ -20,3 +20,7 @@
 [kp6]>[right]
 [kp-a]>[obrack]
 [kp-s]>[cbrack]
+[up]>[rctrl]
+[down]>[ralt]
+[right]>lctrl]
+[left]>[lalt]
