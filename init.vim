@@ -1,25 +1,48 @@
-" Neovim
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set exrc
+set guicursor=
+set hidden
+set relativenumber
+set number
+set nowrap
+set smartcase
+set ignorecase
+set nohlsearch
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+set incsearch
+set termguicolors
+set scrolloff=8
+set noshowmode
+set completeopt=menuone,noinsert,noselect
+set colorcolumn=80
+set signcolumn=yes
+set noerrorbells
 
 call plug#begin()
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+" Telescope requirements
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
+" Git
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+
+Plug 'gruvbox-community/gruvbox'
 call plug#end()
 
-" Keymap
-let mapleader = ","
-nmap <Leader>b :Buffers<CR>
-nmap <Leader>f :Files<CR>
-map <C-k> <C-w><up>
-map <C-j> <C-w><down>
-map <C-h> <C-w><left>
-map <C-l> <C-w><right>
+colorscheme gruvbox
+highlight Normal guibg=none
 
-" Let me switch buffers without saving the current one
-set hidden
-
-" When scrolling, keep the cursor 8 lines from the top and the bottom
-set scrolloff=8
-
-set number
-set relativenumber
-set statusline=%f\ %m\ %r\ Line:\ %l/%L[%p%%]\ Col:\ %c\ Buf:\ #%n\ [%b][0x%B]
+let mapleader = " "
+nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
