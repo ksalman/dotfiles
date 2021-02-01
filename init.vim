@@ -52,5 +52,7 @@ nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 nnoremap <leader>gs :G<cr>
+nnoremap <leader>gw :Gwrite<CR>
+nnoremap <leader>gr :Gread<CR>
 nnoremap <leader>gg :diffget //2<cr>
 nnoremap <leader>gh :diffget //3<cr>
