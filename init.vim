@@ -33,6 +33,7 @@ Plug 'nvim-telescope/telescope.nvim'
 " fzf
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'stsewd/fzf-checkout.vim'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -56,3 +57,8 @@ nnoremap <leader>gw :Gwrite<CR>
 nnoremap <leader>gr :Gread<CR>
 nnoremap <leader>gg :diffget //2<cr>
 nnoremap <leader>gh :diffget //3<cr>
+" Requires fzf-checkout
+nnoremap <leader>gc :GCheckout<cr>
+
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8} }
+let $FZF_DEFAULT_OPTS = '--reverse'
