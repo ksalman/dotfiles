@@ -39,12 +39,23 @@ Plug 'stsewd/fzf-checkout.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 
+" lsp
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim' 
+Plug 'tjdevries/lsp_extensions.nvim'
+
+" Black formatter for Python dev
+Plug 'psf/black'
+
+" lua development
+Plug 'tjdevries/nlua.nvim'
+
 Plug 'gruvbox-community/gruvbox'
 call plug#end()
 
 colorscheme gruvbox
 highlight Normal guibg=none
-
+"
 let mapleader = " "
 " Requires vim-telescope
 nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
@@ -71,3 +82,19 @@ nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
+
+" Python development
+" Create a venv and install pynvim, and set the following variable
+" :help python-virtualenv
+let g:python3_host_prog = '~/.config/nvim/pynvim/bin/python3'
+" sudo npm install -g pyright
+lua require'lspconfig'.pyright.setup{ on_attach=require'completion'.on_attach}
+
+" LSP
+" Get attached clients, run this command from vim
+" lua print(vim.inspect(vim.lsp.buf_get_clients()))
+" Also try "checkhealth" and "LspInfo" commands
+
+" Run Black formatter on Python files
+" Requires psf/black
+autocmd BufWritePre *.py silent execute ':Black'
