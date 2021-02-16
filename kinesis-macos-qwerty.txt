@@ -24,3 +24,7 @@
 [down]>[ralt]
 [right]>lctrl]
 [left]>[lalt]
+[kp-left]>[lalt]
+[kp-right]>[lctrl]
+[kp-up]>[rctrl]
+[kp-down]>[ralt]
