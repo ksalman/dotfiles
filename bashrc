@@ -105,3 +105,5 @@ export THEME_SHOW_SUDO=false
 
 HISTCONTROL=ignoreboth
 complete -C '/usr/local/bin/aws_completer' aws
+
+PATH=$PATH:$HOME/scripts
