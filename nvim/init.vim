@@ -77,6 +77,8 @@ nnoremap <leader>gc :GCheckout<CR>
 
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8} }
 let $FZF_DEFAULT_OPTS = '--reverse'
+" Autocomplete strategy - Requires completion-nvim
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
