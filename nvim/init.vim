@@ -39,6 +39,10 @@ Plug 'stsewd/fzf-checkout.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 
+" Tree-sitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
+
 " lsp
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim' 
@@ -100,3 +104,5 @@ lua require'lspconfig'.pyright.setup{ on_attach=require'completion'.on_attach}
 " Run Black formatter on Python files
 " Requires psf/black
 autocmd BufWritePre *.py silent execute ':Black'
+
+lua require('ksalman')
