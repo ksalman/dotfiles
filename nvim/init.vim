@@ -45,7 +45,7 @@ Plug 'nvim-treesitter/playground'
 
 " lsp
 Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim' 
+Plug 'nvim-lua/completion-nvim'
 Plug 'tjdevries/lsp_extensions.nvim'
 
 " Black formatter for Python dev
@@ -67,7 +67,7 @@ nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<CR>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<CR>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<CR>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<CR>
-" test 
+" test
 nnoremap <leader>fd <cmd>lua require('telescope.builtin').find_files() {cwd = "~/.config"}<CR>
 nnoremap <leader>fx :lua require'telescope.builtin'.find_files {cwd = "~/.config"}<CR>
 " Requires vim-fugitive
@@ -104,5 +104,11 @@ lua require'lspconfig'.pyright.setup{ on_attach=require'completion'.on_attach}
 " Run Black formatter on Python files
 " Requires psf/black
 autocmd BufWritePre *.py silent execute ':Black'
+
+augroup ksalman
+    autocmd!
+    " Remove trailing whitespace
+    autocmd BufWritePre * :%s/\s\+$//e
+augroup END
 
 lua require('ksalman')
