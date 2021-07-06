@@ -4,3 +4,6 @@ require'nvim-treesitter.configs'.setup {
         enable = true,
     },
 }
+
+-- copy and paste from OS clipboard
+vim.opt.clipboard = "unnamedplus"
