@@ -68,6 +68,8 @@ nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<CR>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<CR>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<CR>
 nnoremap <leader>fd :lua require'telescope.builtin'.find_files {cwd = "~/.config",follow=true}<CR>
+
+nnoremap <leader>lr :lua vim.lsp.buf.rename()<CR>
 " Requires vim-fugitive
 nnoremap <leader>gs :G<CR>
 nnoremap <leader>gw :Gwrite<CR>
