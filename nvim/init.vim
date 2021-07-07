@@ -67,9 +67,7 @@ nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<CR>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<CR>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<CR>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<CR>
-" test
-nnoremap <leader>fd <cmd>lua require('telescope.builtin').find_files() {cwd = "~/.config"}<CR>
-nnoremap <leader>fx :lua require'telescope.builtin'.find_files {cwd = "~/.config"}<CR>
+nnoremap <leader>fd :lua require'telescope.builtin'.find_files {cwd = "~/.config",follow=true}<CR>
 " Requires vim-fugitive
 nnoremap <leader>gs :G<CR>
 nnoremap <leader>gw :Gwrite<CR>
