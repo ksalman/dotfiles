@@ -24,7 +24,7 @@ set colorcolumn=80
 set signcolumn=yes
 set noerrorbells
 
-call plug#begin()
+call plug#begin('~/.vim/plugged')
 " Telescope requirements
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
