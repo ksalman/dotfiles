@@ -1,0 +1,1 @@
+reegnz/jq-zsh-plugin
