@@ -12,6 +12,7 @@ eval "$(pyenv virtualenv-init -)"
 
 alias vi=/usr/local/bin/nvim
 alias vim=/usr/local/bin/nvim
+alias cat=/usr/local/bin/bat
 
 json-extract() {
     # Extract a given JSON path
