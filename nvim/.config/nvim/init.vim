@@ -57,6 +57,8 @@ Plug 'tjdevries/nlua.nvim'
 Plug 'gruvbox-community/gruvbox'
 call plug#end()
 
+" Italics need to be set before setting colorscheme
+let g:gruvbox_italic=1
 colorscheme gruvbox
 highlight Normal guibg=none
 "
