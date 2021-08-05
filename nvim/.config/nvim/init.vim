@@ -20,7 +20,7 @@ set termguicolors
 set scrolloff=8
 set noshowmode
 set completeopt=menuone,noinsert,noselect
-set colorcolumn=80
+set colorcolumn=88
 set signcolumn=yes
 set noerrorbells
 
