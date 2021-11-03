@@ -22,3 +22,7 @@ json-extract() {
     ~/git/show-struct/show_struct.py "$1" | fzf --bind "enter:execute(echo {1} \
         | jq -rf /dev/stdin \"$1\")+abort"
 }
+
+if [ -f ~/.workrc ]; then
+    source ~/.workrc
+fi
