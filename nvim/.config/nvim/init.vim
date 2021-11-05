@@ -94,8 +94,8 @@ nmap <silent> <c-l> :wincmd l<CR>
 " Python development
 " Create a venv and install pynvim, and set the following variable
 " :help python-virtualenv
-let g:python3_host_prog = '~/.config/nvim/pynvim/bin/python3'
-" sudo npm install -g pyright
+let g:python3_host_prog = '~/.vim/pynvim/bin/python3'
+" brew install pyright
 lua require'lspconfig'.pyright.setup{ on_attach=require'completion'.on_attach}
 
 " LSP
