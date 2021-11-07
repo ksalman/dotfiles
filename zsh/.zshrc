@@ -7,7 +7,8 @@ antibody bundle < ~/.zsh_plugins.txt
 
 eval "$(pyenv init -)"
 
-export PIP_CERT=~/.ssh/netskope_certadmin.crt
+# pip
+export PIP_CERT=~/.ssh/workproxy.pem
 eval "$(pyenv virtualenv-init -)"
 
 alias vi=/usr/local/bin/nvim
