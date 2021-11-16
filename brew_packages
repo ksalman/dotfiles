@@ -20,3 +20,4 @@ vault
 terraform
 # virtualbox - do not install it with brew, seems buggy
 ipcalc
+hashicorp/tap/terraform-ls

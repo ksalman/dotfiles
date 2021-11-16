@@ -56,6 +56,7 @@ Plug 'tjdevries/nlua.nvim'
 
 Plug 'gruvbox-community/gruvbox'
 Plug 'tpope/vim-commentary'
+
 call plug#end()
 
 " Italics need to be set before setting colorscheme
@@ -98,6 +99,9 @@ nmap <silent> <c-l> :wincmd l<CR>
 let g:python3_host_prog = '~/.vim/pynvim/bin/python3'
 " brew install pyright
 lua require'lspconfig'.pyright.setup{ on_attach=require'completion'.on_attach}
+" brew install terraform-ls
+lua require'lspconfig'.terraformls.setup{ on_attach=require'completion'.on_attach}
+autocmd BufWritePre *.tf lua vim.lsp.buf.formatting()
 
 " LSP
 " Get attached clients, run this command from vim
