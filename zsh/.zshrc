@@ -30,3 +30,7 @@ json-extract() {
 if [ -f ~/.workrc ]; then
     source ~/.workrc
 fi
+
+# activate zsh completion system
+autoload -Uz compinit
+compinit
