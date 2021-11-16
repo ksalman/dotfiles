@@ -34,3 +34,6 @@ fi
 # activate zsh completion system
 autoload -Uz compinit
 compinit
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform
