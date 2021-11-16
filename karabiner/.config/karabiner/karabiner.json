@@ -226,6 +226,16 @@
                             "key_code": "escape"
                         }
                     ]
+                },
+                {
+                    "from": {
+                        "key_code": "escape"
+                    },
+                    "to": [
+                        {
+                            "key_code": "caps_lock"
+                        }
+                    ]
                 }
             ],
             "virtual_hid_keyboard": {
