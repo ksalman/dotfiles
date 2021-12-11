@@ -19,6 +19,7 @@ alias ssh='TERM=screen-256color ssh'
 alias vagrant='TERM=screen-256color vagrant'
 export EDITOR=/usr/local/bin/nvim
 export TERM=tmux-256color
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 json-extract() {
     # Extract a given JSON path
