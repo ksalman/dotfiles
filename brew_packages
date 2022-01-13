@@ -25,3 +25,6 @@ tig
 coreutils
 parallel
 pueue
+saulpw/vd/visidata
+#this needs to be sourced at the end of .zshrc
+zsh-syntax-highlighting
