@@ -84,4 +84,15 @@ compinit
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
 
+case "$OSTYPE" in
+    linux*)
+        # echo linux
+        # source .zshrc-linux
+    ;;
+    darwin*)
+        # echo darwin
+        # source .zshrc-darwin
+    ;;
+esac
+
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
