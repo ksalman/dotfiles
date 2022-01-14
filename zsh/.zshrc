@@ -36,7 +36,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
     git
     timer
-    dotenv
+    direnv
 )
 
 source $ZSH/oh-my-zsh.sh
