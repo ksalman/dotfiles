@@ -24,6 +24,7 @@ COMPLETION_WAITING_DOTS="true"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="yyyy-mm-dd"
 #
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -91,5 +92,12 @@ case "$OSTYPE" in
         # source .zshrc-darwin
     ;;
 esac
+
+export HISTSIZE=100000
+export SAVEHIST=100000
+setopt histreduceblanks
+setopt histignorespace
+setopt incappendhistory
+unsetopt sharehistory
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
