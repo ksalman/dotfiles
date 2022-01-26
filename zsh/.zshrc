@@ -50,8 +50,6 @@ antibody bundle < ~/.zsh_plugins.txt
 
 eval "$(pyenv init -)"
 
-# pip
-export PIP_CERT=~/.ssh/workproxy.pem
 eval "$(pyenv virtualenv-init -)"
 
 alias vi=/usr/local/bin/nvim
@@ -88,6 +86,8 @@ case "$OSTYPE" in
         # source .zshrc-linux
     ;;
     darwin*)
+        # pip
+        export PIP_CERT=~/.ssh/workproxy.pem
         # echo darwin
         # source .zshrc-darwin
     ;;
