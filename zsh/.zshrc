@@ -100,4 +100,9 @@ setopt histignorespace
 setopt incappendhistory
 unsetopt sharehistory
 
+FD_OPTIONS="--follow --exclude .git"
+export FZF_DEFAULT_COMMAND="fd --type f --type l $FD_OPTIONS"
+export FZF_ALT_C_COMMAND="fd --type d $FD_OPTIONS"
+export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
+
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
