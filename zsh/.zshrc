@@ -45,9 +45,6 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH=$PATH:$HOME/scripts
 
-source <(antibody init)
-antibody bundle < ~/.zsh_plugins.txt
-
 eval "$(pyenv init -)"
 
 eval "$(pyenv virtualenv-init -)"
