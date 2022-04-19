@@ -1,4 +1,4 @@
 # Add an ip_address type.
 import ipaddress
 vd.addType(ipaddress.ip_address, icon=':', formatter=lambda fmt,ip: str(ip))
-TableSheet.addCommand(None, 'type-ipaddr', 'cursorCol.type=ipaddress.ip_address', 'set type of current column to IP address')
+TableSheet.addCommand('z&', 'type-ipaddr', 'cursorCol.type=ipaddress.ip_address', 'set type of current column to IP address')
