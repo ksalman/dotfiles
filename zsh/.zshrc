@@ -49,9 +49,9 @@ eval "$(pyenv init -)"
 
 eval "$(pyenv virtualenv-init -)"
 
-alias vi=/usr/local/bin/nvim
-alias vim=/usr/local/bin/nvim
-alias cat=/usr/local/bin/bat
+alias vi=~/nvim.appimage
+alias vim=~/nvim.appimage
+alias cat=/usr/bin/bat
 # None of the remote hosts have tmux-256color so let's override TERM before we ssh
 alias ssh='TERM=screen-256color ssh'
 alias vagrant='TERM=screen-256color vagrant'
