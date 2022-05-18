@@ -56,6 +56,7 @@ Plug 'tjdevries/nlua.nvim'
 
 Plug 'gruvbox-community/gruvbox'
 Plug 'tpope/vim-commentary'
+Plug 'Glench/Vim-Jinja2-Syntax'
 
 call plug#end()
 
