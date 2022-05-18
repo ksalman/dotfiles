@@ -113,6 +113,11 @@ autocmd BufWritePre *.tf lua vim.lsp.buf.formatting()
 " Requires psf/black
 autocmd BufWritePre *.py silent execute ':Black'
 
+lua <<EOF
+  require'lspconfig'.terraformls.setup{}
+EOF
+autocmd BufWritePre *.tf lua vim.lsp.buf.formatting_sync()
+
 augroup ksalman
     autocmd!
     " Remove trailing whitespace
