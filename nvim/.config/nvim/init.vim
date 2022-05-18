@@ -37,6 +37,8 @@ Plug 'stsewd/fzf-checkout.vim'
 
 " Git
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
 Plug 'vim-airline/vim-airline'
 
 " Tree-sitter
@@ -93,6 +95,25 @@ nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
+
+" Requires vim-gitgutter
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = '>'
+let g:gitgutter_sign_removed = '-'
+let g:gitgutter_sign_removed_first_line = '^'
+let g:gitgutter_sign_modified_removed = '<'
+let g:gitgutter_override_sign_column_highlight = 1
+highlight SignColumn guibg=bg
+highlight SignColumn ctermbg=bg
+" Jump between hunks
+nmap <Leader>gn <Plug>(GitGutterNextHunk)
+nmap <Leader>gp <Plug>(GitGutterPrevHunk)
+" Hunk-add and hunk-revert for chunk staging
+nmap <Leader>ga <Plug>(GitGutterStageHunk)
+nmap <Leader>gu <Plug>(GitGutterUndoHunk)
+
+" Update sign column every quarter second - to update gitgutter signs quickly
+set updatetime=250
 
 " Python development
 " Create a venv and install pynvim, and set the following variable
