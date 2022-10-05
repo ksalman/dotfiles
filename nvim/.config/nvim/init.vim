@@ -76,6 +76,9 @@ nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<CR>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<CR>
 nnoremap <leader>fd :lua require'telescope.builtin'.find_files {cwd = "~/.config",follow=true}<CR>
 
+" Paste without putting things in unnamed register
+xnoremap <leader>p "_dP
+
 nnoremap <leader>lr :lua vim.lsp.buf.rename()<CR>
 " Requires vim-fugitive
 nnoremap <leader>gs :G<CR>
