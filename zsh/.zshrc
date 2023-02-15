@@ -1,5 +1,5 @@
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="gruvbox"
+ZSH_THEME="spaceship"
 #
 # Uncomment one of the following lines to change the auto-update behavior
  zstyle ':omz:update' mode disabled  # disable automatic updates
@@ -32,8 +32,6 @@ HIST_STAMPS="yyyy-mm-dd"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    git
-    timer
     direnv
 )
 
@@ -96,6 +94,7 @@ setopt histreduceblanks
 setopt histignorespace
 setopt incappendhistory
 unsetopt sharehistory
+setopt HIST_IGNORE_SPACE
 
 FD_OPTIONS="--follow --exclude .git"
 export FZF_DEFAULT_COMMAND="fd --type f --type l $FD_OPTIONS"
